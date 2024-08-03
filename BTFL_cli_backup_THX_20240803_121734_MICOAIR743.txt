@@ -1,0 +1,111 @@
+defaults nosave
+
+
+# version
+# Betaflight / STM32H743 (SH74) 4.5.0 Jun 26 2024 / 19:10:02 (c155f5830) MSP API: 1.46
+# config rev: 7b6b24f
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name MICOAIR743
+manufacturer_id MICO
+mcu_id 001e00393230510d36393933
+signature 
+
+# name: THX
+
+# feature
+feature GPS
+feature TELEMETRY
+feature LED_STRIP
+feature OSD
+feature ESC_SENSOR
+
+# aux
+aux 0 0 1 1800 2100 0 0
+aux 1 1 0 900 1500 0 0
+aux 2 2 0 1550 2100 0 0
+aux 3 13 2 1500 2100 0 0
+
+# master
+set acc_calibration = 11,-47,19,1
+set fpv_mix_degrees = 30
+set motor_output_reordering = 2,3,0,1,4,5,6,7
+set failsafe_procedure = AUTO-LAND
+set bat_capacity = 1500
+set vbat_scale = 217
+set osd_warn_bitmask = 31
+set osd_rssi_alarm = 3
+set osd_cap_alarm = 1000
+set osd_alt_alarm = 0
+set osd_vbat_pos = 2401
+set osd_link_quality_pos = 2103
+set osd_flymode_pos = 2081
+set osd_g_force_pos = 2273
+set osd_craft_name_pos = 2093
+set osd_home_dir_pos = 2319
+set osd_home_dist_pos = 2198
+set osd_compass_bar_pos = 362
+set osd_altitude_pos = 2230
+set osd_power_pos = 2433
+set osd_warnings_pos = 2441
+set osd_battery_usage_pos = 2440
+set osd_ready_mode_pos = 2113
+set osd_esc_tmp_pos = 2390
+set osd_core_temp_pos = 2454
+set osd_sys_distance_pos = 2305
+set osd_sys_vtx_temp_pos = 2422
+set osd_displayport_device = AUTO
+set osd_canvas_width = 30
+set osd_canvas_height = 13
+set vcd_video_system = NTSC
+set craft_name = THX
+set pilot_name = Thássio
+
+profile 0
+
+# profile 0
+set p_pitch = 51
+set i_pitch = 92
+set d_pitch = 57
+set f_pitch = 74
+set p_roll = 49
+set i_roll = 88
+set d_roll = 50
+set f_roll = 71
+set p_yaw = 49
+set i_yaw = 88
+set f_yaw = 71
+set d_min_roll = 50
+set d_min_pitch = 57
+set feedforward_averaging = 3_POINT
+set simplified_master_multiplier = 170
+set simplified_pi_gain = 65
+set simplified_dmax_gain = 0
+set simplified_feedforward_gain = 35
+
+profile 1
+
+profile 2
+
+profile 3
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
